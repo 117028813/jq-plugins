@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul {
+      list-style: none;
+    }
+    .tab {
+      width: 600px;
+      border: 1px solid;
+    }
+
+    .tab .tab-header ul {
+      display: flex;
+    }
+    .tab .tab-header ul li {
+      flex: 1;
+      padding: 10px 15px;
+    }
+    .tab .tab-header ul li.active {
+      background-color: #ccc;
+    }
+    .tab .tab-content {
+      height: 400px;
+    }
+    .tab .tab-content .tab-content-item {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+<div class="tab">
+  <div class="tab-header">
+    <ul>
+      <li class="active">选项卡一</li>
+      <li>选项卡2</li>
+      <li>选项卡3</li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <div class="tab-content-item" style="display: block">
+      内容一
+    </div>
+    <div class="tab-content-item">
+      内容二
+    </div>
+    <div class="tab-content-item">
+      内容三
+    </div>
+  </div>
+</div>  
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="./jquery.tab.js"></script>
+<script>
+  $('.tab').tab({
+    eventType: 'mouseover'
+  })
+</script>
+</body>
+</html>
